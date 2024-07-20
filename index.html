@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SallTech</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;800;900&display=swap');
+
+        body, * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        header{
+            position: fixed;
+            background-color: #0062ff;
+            padding: 10px;
+            width: 100%;
+            z-index: 5;
+            text-align: center;
+            margin-top: -10px;
+        }
+        header h1{
+            text-transform: uppercase;
+            font-size: 2.6rem;
+            font-weight: 900;
+            border: solid 5px #fff;
+            color: #fff;
+            /* background-color: #0062ff; */
+            display: inline-block;
+            padding: 2px 15px;
+            border-radius: 32px;
+        }
+        
+        
+        .welcome{
+            max-width: 100%;
+            width: 1200px;
+            /* background-color: darkslateblue; */
+            position:left;
+            margin: 10px auto;
+            height: 550px;
+        }
+        
+        .welcome img{
+            position: absolute;
+            top: 30%;
+            left: 80%;
+            width: 250px;
+            border-radius: 50%;
+            background-color: darkgray;
+            border-top-right-radius: 0;
+        }
+        
+        .welcome h2{
+            font-size: 2.6rem;
+            text-transform: uppercase;
+            position: absolute;
+            left: 5%;
+            top: 40%;
+            color: #333;
+        }
+        
+        .welcome h2 span{
+            font-weight: bold;
+            color: #0062ff;
+        }
+        
+        nav{
+            position: sticky;
+            top: 90px;
+            margin: 25px auto;
+            background-color: darkgrey;
+            z-index: 15;
+        }
+        nav ul{
+            display: flex;
+            justify-content: space-evenly;
+            list-style-type: none;
+            padding: 10px;
+        }
+        
+        nav ul li a{
+            text-decoration: none;
+            font-size: 1.5rem;
+            text-transform: lowercase;
+            color: #222;
+        }
+        
+        /* main content style */
+        
+        main.main-content{
+            width: 100%;
+            max-width: 1000px;
+            margin: 75px auto;
+        }
+        
+        section h2{
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+            color: #0062ff;
+        }
+        
+        section p{
+            font-size: 1.4rem;
+            column-count: 0;
+        }
+        
+        .images{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
+        .images li{
+            list-style-type: none;
+            margin-right: 10px;
+        }
+        
+        .image img{
+            width: 100%;
+            border: solid 2px #e2e2e2;
+            border-radius: 1rem;
+        }
+        
+        div.services .row{
+            display: flex;
+            margin-bottom: 2rem;
+        }
+        div.service-title{
+            display: flex;
+        }
+        .service-title img{
+            width: 32px;
+            margin-right: 15px;
+        }
+        
+        div.service-title h3{
+            font-size: 1.5rem;
+            color: #444;
+        }
+        
+        
+        form{
+            border: solid 2px #ddd;
+            width: 60%;
+            padding: 25px;
+            background-color: #0062ffaf;
+            border-radius: 2rem;
+        }
+        
+        form input[type='text'], form input[type='email'],form textarea{
+            padding: 8px;
+            font-size: 1.2rem;
+            width: 100%;
+            border: solid 2px #ddd;
+            margin: 6px 0;
+        }
+        form input[type='submit']{
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-transform: capitalize;
+            border: none;
+            background-color: #fff;
+            color: #0062ff;
+            padding: 10px 24px;
+            border-radius: 2rem;
+        }
+        
+        .whatsapp{
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+        }
+        .whatsapp img.logo{
+            height: 52px;
+            justify-items: center;
+        }
+        .whatsapp span.phone{
+            font-size: 35px;
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        
+        div.form{
+            position: relative;
+        }
+        
+        div.form form{
+            position: absolute;
+            top: 20%;
+            left: 40%;
+        }
+        
+        
+        footer{
+            width: 100%;
+            background-color: #0062ff;
+            color: #fff;
+            margin-top: 50px;
+        }
+        
+        footer p{
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 15px 0;
+        }
+        
+        footer p a{
+            text-decoration: none;
+            color: rgb(199, 198, 198);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="main-title">Bienvenue à SallTech</h1>
+    </header>
+    <section class="welcome">
+        <img src="./images/Hawo.jpg.jpg" alt="image de profile">
+        <h2>Salut les pros, <br><span>SallTech</span> votre agence de <br>creation des sites Web <br>Des applications  et Ventes en Ligne</h2>
+    </section>
+    <nav>
+        <ul>
+            <li>
+                <a href="#a-propos">A propos</a>
+            </li>
+            <li>
+                <a href="#experiences">Experiences</a>
+            </li>
+            <li>
+                <a href="#nos-services">Nos Services</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <section id="a-propos" class="section">
+            <h2>A propos de nous</h2>
+            <p>SallTech est l'une des meilleurs agence de création digitale avec beaucoup d'expérience. Donc confiez-nous vos projets et vous ne serez pas déçu...</p>
+        </section>
+
+        <section id="experiences" class="section">
+            <h2>Experience de travail</h2>
+            <ul class="images">
+                <li class="image">
+                    <img src="./images/Capture.png" alt="Bproo.com">
+                </li>
+                <!-- Ajoutez d'autres éléments d'expérience ici si nécessaire -->
+            </ul>
+        </section>
+
+        <section id="nos-services" class="section">
+            <h2>Nos Services</h2>
+            <div class="services">
+               <div class="row">
+                    <div class="service">
+                        <div class="service-title">
+                            <img src="./images/cloud-computing.svg" alt="cloud computing">
+                            <h3>Developement Web</h3>
+                        </div>
+                        <p>Chez Salltech, nous croyons en la collaboration transparente pour répondre <br> à vos besoins présents et futurs.</p>
+                    </div>
+                    <div class="service">
+                        <div class="service-title">
+                            <img src="./images/presentation.svg" alt="cloud computing">
+                            <h3>Création des applications</h3>
+                        </div>
+                        <p>Chez Salltech, nous croyons en la collaboration transparente pour répondre <br> à vos besoins présents et futurs.</p>
+                    </div>
+               </div>
+               <div class="row">
+                    <div class="service">
+                        <div class="service-title">
+                            <img src="./images/seo.svg" alt="search engine optimization">
+                            <h3>SEO</h3>
+                        </div>
+                        <p>Chez Salltech, nous croyons en la collaboration transparente pour répondre <br> à vos besoins présents et futurs.</p>
+                    </div>
+                    <div class="service">
+                        <div class="service-title">
+                            <img src="./images/settings.svg" alt="devops">
+                            <h3>SallTech</h3>
+                        </div>
+                        <p>Chez Salltech, nous croyons en la collaboration transparente pour répondre <br> à vos besoins présents et futurs.</p>
+                    </div>
+               </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contactez Nous</h2>
+            <div class="form">
+                <img src="./images/office.jpg" alt="office contact">
+                <form>
+                    <div class="whatsapp">
+                        <img class="logo" src="./images/whatsapp.png" alt="logo whatsapp">
+                        <span class="phone">783831084</span>
+                    </div>
+                    <input type="text" name="nom" placeholder="Nom">
+                    <input type="email" name="email" placeholder="Email">
+                    <textarea name="message" id="" rows="5"></textarea>
+                    <input type="submit" value="Envoyer Votre Message">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Tous droits réservés <a href="">SallTech</a> &copy; 2024</p>
+    </footer>
+</body>
+</html>
